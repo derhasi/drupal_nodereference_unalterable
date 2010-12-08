@@ -1,0 +1,6 @@
+; $Id$
+name = Node Reference Unalterable
+description = Adds an additional widget to the CCK Node Reference field that lets you choose a Node on creation, and holds it forever.
+dependencies[] = nodereference
+package = CCK
+core = 6.x

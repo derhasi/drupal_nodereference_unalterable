@@ -1,0 +1,39 @@
+<?php
+// $Id: nodereference_unalterable.install,v 1.2 2009/07/25 23:40:04 quicksketch Exp $
+
+/**
+ * @file
+ * Implementation of hook_install().
+ */
+function nodereference_unalterable_install() {
+  drupal_load('module', 'content');
+  content_notify('install', 'nodereference_unalterable');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function nodereference_unalterable_uninstall() {
+  drupal_load('module', 'content');
+  content_notify('uninstall', 'nodereference_unalterable');
+}
+
+/**
+ * Implementation of hook_enable().
+ *
+ * Notify content module when this module is enabled.
+ */
+function nodereference_unalterable_enable() {
+  drupal_load('module', 'content');
+  content_notify('enable', 'nodereference_unalterable');
+}
+
+/**
+ * Implementation of hook_disable().
+ *
+ * Notify content module when this module is disabled.
+ */
+function nodereference_unalterable_disable() {
+  drupal_load('module', 'content');
+  content_notify('disable', 'nodereference_unalterable');
+}
